@@ -1,0 +1,210 @@
+{
+  "main": {
+    "id": "fb83ca5cdf47b163",
+    "type": "split",
+    "children": [
+      {
+        "id": "6be0451a5560e1bb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be7d29e4e31599aa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "References/Detox Cleanse.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Detox Cleanse"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7112945992ac476c",
+    "type": "split",
+    "children": [
+      {
+        "id": "3232e188f10e3c9c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "86e99ae25692243c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "d7d9ddc727a4a228",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "6d3f4e454629f774",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "fb32dae85240f77b",
+    "type": "split",
+    "children": [
+      {
+        "id": "9bc3f01f10ed0bab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "993168bae28345cb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "7e2c65493d74e19e",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e21c20d4e47ae440",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "markdown-importer:Open format converter": false,
+      "zk-prefixer:Create new unique note": false,
+      "random-note:Open random note": false,
+      "workspaces:Manage workspace layouts": false,
+      "bases:Create new base": false,
+      "obsidian-importer:Open Importer": false
+    }
+  },
+  "active": "be7d29e4e31599aa",
+  "lastOpenFiles": [
+    "References/Week Journal [Date].md",
+    "References/Untitled.md",
+    "References/Note with Tasks.md",
+    "References/Meeting [Date].md",
+    "References/Journal [Date].md",
+    "Attachments/Eye Prescriptions/Screenshot_2024-08-06_at_10.43.07_PM.png",
+    "Attachments/Eye Prescriptions/Screenshot_2024-08-06_at_10.42.35_PM.png",
+    "Attachments/Eye Prescriptions",
+    "Attachments/Skincare/46317351-ab00-460b-99f2-5e13dd7906de.png",
+    "Attachments/Skincare",
+    "Attachments/Social Sales Funnel/Screenshot_2024-05-11_at_11.29.19_PM.png",
+    "Attachments/Social Sales Funnel",
+    "Attachments/Note with Tasks/View Tasks 212421f1b33681c8bc04cec865c5ad34.csv",
+    "Attachments/Note with Tasks",
+    "Attachments/Body Scans/2025-04-01_Body-Scan.pdf",
+    "Attachments/Body Scans/2025-01-05_Body-Scan.pdf",
+    "Attachments/Body Scans/2024-12-13_Body-Scan.pdf",
+    "Attachments/Body Scans/2024-11-07_Body-Scan.pdf",
+    "Attachments/Body Scans/2024-10-26_Body-Scan.pdf",
+    "Attachments/[R] Travel & Activities Management/image.png",
+    "Attachments/[R] Travel & Activities Management/image 2.png",
+    "Attachments/[R] Travel & Activities Management/image 1.png",
+    "Attachments/Jet Lag Supplements/FlyKitt3-1SupplementFactsPanelforShopify_4x_dd2d1e99-1094-4cc8-808c-ab44ba12329c.webp",
+    "Attachments/Portion Size/Untitled.png",
+    "Attachments/Por y Para (for)/Untitled.png",
+    "Notion Notes Import/Notes/[R] Virtual Assistant Expectations 1c7421f1b336804f853bda57cc025f19.md",
+    "Notion Notes Import/Notes/[R] Travel & Activities Management 10b421f1b336807895ced98e60cf3be8.md",
+    "Notion Notes Import/Notes/[R] Tools 04ac6ce468f243eeb910cdbcd09df0c6.md",
+    "Notion Notes Import/Notes/[R] Time Zones 33cdd6fca36e4b67ba68c5c062c688f4.md",
+    "Notion Notes Import/Notes/[R] San Francisco 1b4421f1b33680febfeecfae9a5a0558.md",
+    "Notion Notes Import/Notes/[R] Onboarding 142421f1b33680d8b891c2fac0339b66.md",
+    "Notion Notes Import/Notes/[R] Information & Preferences 3fd25d06673540bd97ba3448be3f69bb.md",
+    "Notion Notes Import/Notes/[R] Calendars & Schedule 07853123429d402d8d3a6ef3ac73dad6.md",
+    "Notion Notes Import/Notes/[R] About Slack 8da78af91e8049ba8c1e07dab6734c69.md",
+    "Notion Notes Import/Notes/[R] About Notion 9385b32f7c114c16a1f583eb21ab0a5f.md",
+    "Notion Notes Import/Notes/[DC] Monthly @July 1, 2025 206421f1b336804d8c40f57e75f8c4e4.md",
+    "Notion Notes Import/Notes/[DC-SOP] Weekly Task List 206421f1b3368056844ec7665d7503a3.md",
+    "Notion Notes Import/Notes/[DC-SOP] Daily Task List 1c8421f1b3368049bfeffbf87612665e.md",
+    "Notion Notes Import/Notes/Zero to Launch 615eaa321bc0431c83fbb4f0bfe1e796.md",
+    "Notion Notes Import/Notes/Withings - Weight 3e2ac07c5949491a9b33f34bf23530f4.md",
+    "Notion Notes Import/Notes/Week Journal [Date] 212421f1b336815ba64bd10b63722c1a.md",
+    "Notion Notes Import/Notes/Website Tools - Zach Zorn 1d709a44863f437dbfcadb22518f8d26.md",
+    "Notion Notes Import/Notes/Website Theme - Zach Zorn 21ded94424e04960b6283693951e07db.md",
+    "Notion Notes Import/Notes/Website Quick Reference - Zach Zorn 3ef77f98f76f4d19863692387d037e89.md",
+    "Notion Notes Import/Notes/Website Plugins - Zach Zorn c3ba57f9a4204797b296974f8c3df9d9.md",
+    "Notion Notes Import/Notes/Website Lessons - Zach Zorn 6d8410b9912d40899e523a248d394c50.md"
+  ]
+}

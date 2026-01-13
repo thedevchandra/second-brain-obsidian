@@ -5,11 +5,17 @@ topics: []
 standard:
 review:
 created: {{date}}
+notion-database:
 ---
 
 ## Standard
 
 <!-- What is the standard of performance or quality for this area? -->
+
+## Notion Integration
+
+<!-- Optional: Link to related Notion databases or pages -->
+<!-- Example: **Project Tracking**: [View in Notion](URL) -->
 
 ## Current Projects
 

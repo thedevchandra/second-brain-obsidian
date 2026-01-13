@@ -341,6 +341,27 @@ This vault supports the PARA method using a **property-based approach** rather t
 
 📖 **See `PARA_IMPLEMENTATION_GUIDE.md` for complete instructions on implementing PARA in this vault**
 
+### Notion Integration (Optional)
+
+This vault supports a **hybrid approach** combining Obsidian with Notion:
+
+- **Obsidian** - For thinking, knowledge work, and connecting ideas
+- **Notion** - For structured databases, task tracking, and collaboration
+
+**Notion Integration Features:**
+- Link to Notion databases from area and project notes using `notion-database`, `notion-page`, and `notion-action-items` properties
+- Reference templates for documenting Notion databases in Obsidian
+- Bidirectional linking patterns between both systems
+- Clear separation: Notion tracks, Obsidian thinks
+
+**Quick Start with Notion:**
+1. Use `NOTION_AUDIT_WORKSHEET.md` to map your current Notion structure
+2. Create Obsidian notes that link to Notion using the provided templates
+3. Add Notion URLs to the `notion-database` or `notion-page` properties
+4. Establish daily/weekly review workflows that check both systems
+
+📖 **See `NOTION_INTEGRATION.md` for complete integration patterns and workflows**
+
 ### Personal Rules & Conventions
 
 These are the rules followed in this vault. You can adapt them to your preferences:
