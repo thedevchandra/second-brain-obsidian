@@ -1,11 +1,24 @@
-# obsidian
+# Obsidian workspace and user-specific settings
 .obsidian/appearance.json
 .obsidian/hotkeys.json
-.obsidian/workspace.json
+.obsidian/workspace.json          # Desktop workspace layout and state
+.obsidian/workspace-mobile.json   # Mobile workspace layout and state
 .obsidian/themes
 .obsidian/plugins
 .obsidian/community-plugins.json
 .obsidian/core-plugins-migration.json
 
+# Obsidian cache and temporary files
+.obsidian/cache                   # Plugin and metadata cache files
+
+# Obsidian trash
+.trash/                           # Deleted files stored in Obsidian's trash
+
 # Exclude macOS Finder (System Explorer) View States
 .DS_Store
+
+# Environment and configuration files
+.env
+.env.*
+*.mcp.json
+mcp.json
