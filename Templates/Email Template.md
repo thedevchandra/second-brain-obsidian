@@ -5,5 +5,5 @@ created: {{date}}
 org: []
 people: []
 url:
-topics:
+topics: []
 ---

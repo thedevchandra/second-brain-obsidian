@@ -3,4 +3,11 @@ tags:
   - categories
 ---
 
-![[Projects.base]]
+## Active Projects
+
+![[Projects.base#Active]]
+
+
+## Completed Projects
+
+![[Projects.base#Completed]]

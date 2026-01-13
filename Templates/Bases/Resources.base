@@ -1,0 +1,94 @@
+filters:
+  and:
+    - '!file.name.contains("Template")'
+    - note.para = "resource"
+properties:
+  file.name:
+    displayName: Name
+  note.topics:
+    displayName: Topics
+  note.type:
+    displayName: Type
+  note.rating:
+    displayName: Rating
+  note.created:
+    displayName: Created
+  note.last:
+    displayName: Last Updated
+views:
+  - type: table
+    name: All Resources
+    order:
+      - file.name
+      - topics
+      - type
+      - rating
+      - created
+      - last
+    sort:
+      - property: topics
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 250
+      note.topics: 200
+      note.type: 120
+      note.rating: 80
+  - type: table
+    name: By Topic
+    order:
+      - topics
+      - file.name
+      - type
+      - rating
+      - last
+    sort:
+      - property: topics
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.topics: 200
+      file.name: 250
+      note.type: 120
+      note.rating: 80
+  - type: table
+    name: Top Rated
+    filters:
+      and:
+        - "!note.rating.isEmpty()"
+    order:
+      - file.name
+      - rating
+      - topics
+      - type
+      - last
+    sort:
+      - property: rating
+        direction: DESC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 250
+      note.rating: 80
+      note.topics: 200
+      note.type: 120
+  - type: table
+    name: Recently Updated
+    order:
+      - file.name
+      - last
+      - topics
+      - type
+      - rating
+    sort:
+      - property: last
+        direction: DESC
+      - property: file.name
+        direction: ASC
+    limit: 50
+    columnSize:
+      file.name: 250
+      note.last: 120
+      note.topics: 200

@@ -1,7 +1,7 @@
 filters:
   and:
     - '!file.name.contains("Template")'
-    - note.para = "project"
+    - note.para = "area"
 properties:
   file.name:
     displayName: Name
@@ -9,12 +9,10 @@ properties:
     displayName: Status
   note.topics:
     displayName: Topics
-  note.deadline:
-    displayName: Deadline
-  note.start:
-    displayName: Start
-  note.completed:
-    displayName: Completed
+  note.standard:
+    displayName: Standard
+  note.review:
+    displayName: Last Review
 views:
   - type: table
     name: Active
@@ -24,57 +22,49 @@ views:
     order:
       - file.name
       - status
-      - deadline
       - topics
-      - start
+      - standard
+      - review
     sort:
-      - property: deadline
-        direction: ASC
       - property: file.name
         direction: ASC
     columnSize:
       file.name: 250
       note.status: 100
-      note.deadline: 120
       note.topics: 200
-  - type: table
-    name: Completed
-    filters:
-      and:
-        - note.status = "completed"
-    order:
-      - file.name
-      - status
-      - completed
-      - topics
-      - deadline
-    sort:
-      - property: completed
-        direction: DESC
-      - property: file.name
-        direction: ASC
-    columnSize:
-      file.name: 250
-      note.completed: 120
-      note.topics: 200
+      note.standard: 200
   - type: table
     name: All
     order:
       - file.name
       - status
-      - deadline
       - topics
-      - start
-      - completed
+      - standard
+      - review
     sort:
       - property: status
-        direction: ASC
-      - property: deadline
         direction: ASC
       - property: file.name
         direction: ASC
     columnSize:
       file.name: 250
       note.status: 100
-      note.deadline: 120
       note.topics: 200
+      note.standard: 200
+  - type: table
+    name: By Topic
+    order:
+      - topics
+      - file.name
+      - status
+      - standard
+      - review
+    sort:
+      - property: topics
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.topics: 200
+      file.name: 250
+      note.status: 100

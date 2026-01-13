@@ -22,3 +22,11 @@
 .env.*
 *.mcp.json
 mcp.json
+
+# Node modules and dependencies
+node_modules/
+package-lock.json
+
+# Convex build artifacts
+convex.json
+.convex/
