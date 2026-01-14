@@ -3,12 +3,13 @@ para: project
 status: active
 topics: []
 deadline:
-start: {{date}}
+start: <% tp.file.creation_date("YYYY-MM-DD") %>
 completed:
-created: {{date}}
+created: <% tp.file.creation_date("YYYY-MM-DD") %>
 notion-page:
 notion-action-items:
 ---
+<%* await tp.file.move("/Projects/" + tp.file.title) %>
 
 ## Goal
 

@@ -1,7 +1,7 @@
 filters:
   and:
     - '!file.name.contains("Template")'
-    - note.para = "project"
+    - note.para == "project"
 properties:
   file.name:
     displayName: Name
@@ -20,7 +20,7 @@ views:
     name: Active
     filters:
       and:
-        - note.status = "active"
+        - note.status == "active"
     order:
       - file.name
       - status
@@ -41,7 +41,7 @@ views:
     name: Completed
     filters:
       and:
-        - note.status = "completed"
+        - note.status == "completed"
     order:
       - file.name
       - status

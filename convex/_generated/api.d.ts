@@ -9,7 +9,9 @@
  */
 
 import type * as bookmarks from "../bookmarks.js";
+import type * as dailyEntries from "../dailyEntries.js";
 import type * as events from "../events.js";
+import type * as highlights from "../highlights.js";
 import type * as notes from "../notes.js";
 import type * as people from "../people.js";
 import type * as projects from "../projects.js";
@@ -23,7 +25,9 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   bookmarks: typeof bookmarks;
+  dailyEntries: typeof dailyEntries;
   events: typeof events;
+  highlights: typeof highlights;
   notes: typeof notes;
   people: typeof people;
   projects: typeof projects;

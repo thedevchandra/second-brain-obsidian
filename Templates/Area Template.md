@@ -4,9 +4,10 @@ status: active
 topics: []
 standard:
 review:
-created: {{date}}
+created: <% tp.file.creation_date("YYYY-MM-DD") %>
 notion-database:
 ---
+<%* await tp.file.move("/Areas/" + tp.file.title) %>
 
 ## Standard
 

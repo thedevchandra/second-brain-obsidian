@@ -1,7 +1,7 @@
 filters:
   and:
     - '!file.name.contains("Template")'
-    - note.para = "resource"
+    - note.para == "resource"
 properties:
   file.name:
     displayName: Name

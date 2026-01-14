@@ -1,5 +1,36 @@
 # Convex Functions Documentation
 
+## Overview
+
+Your second brain backend is fully implemented with **8 core entities** and a complete set of functions:
+
+| Entity | Mutations | Queries | Total Functions |
+|--------|-----------|---------|-----------------|
+| **Notes** | 5 | 9 | 14 |
+| **Tasks** | 5 | 10 | 15 |
+| **Projects** | 8 | 9 | 17 |
+| **People** | 5 | 11 | 16 |
+| **Bookmarks** | 5 | 13 | 18 |
+| **Events** | 5 | 16 | 21 |
+| **Highlights** | 4 | 15 | 19 |
+| **Daily Entries** | 4 | 16 | 20 |
+| **TOTAL** | **41** | **99** | **140** |
+
+### Key Features
+
+- **Full-text search** on notes, bookmarks, highlights, projects, and people
+- **Knowledge graph** with bidirectional links between notes
+- **CRM functionality** with interaction tracking and follow-up reminders
+- **Project management** with lifecycle tracking and task integration
+- **Time tracking** with events, calendar integration, and meeting notes
+- **Personal analytics** with daily entries, mood tracking, and streak counting
+- **Resource management** with bookmarks, highlights, and bulk import
+- **Oura Ring integration** for health metrics
+- **Tag management** with hierarchical support and usage tracking
+- **Vector embeddings** ready for AI-powered semantic search
+
+---
+
 ## Notes Functions (`convex/notes.ts`)
 
 ### Mutations
@@ -1010,6 +1041,370 @@ returns: {
 
 ---
 
+## Highlights Functions (`convex/highlights.ts`)
+
+### Mutations
+
+#### `create`
+Create a new highlight.
+```typescript
+args: {
+  content: string;
+  source: string;
+  sourceUrl?: string;
+  author?: string;
+  noteId?: Id<"notes">;
+  tags?: string[];
+  color?: string;
+}
+```
+
+#### `update`
+Update an existing highlight.
+```typescript
+args: {
+  id: Id<"highlights">;
+  content?: string;
+  source?: string;
+  sourceUrl?: string;
+  author?: string;
+  noteId?: Id<"notes">;
+  tags?: string[];
+  color?: string;
+}
+```
+
+#### `deleteHighlight`
+Delete a highlight.
+```typescript
+args: { id: Id<"highlights"> }
+```
+
+#### `bulkImport`
+Import multiple highlights at once.
+```typescript
+args: {
+  highlights: Array<{
+    content: string;
+    source: string;
+    sourceUrl?: string;
+    author?: string;
+    tags?: string[];
+    color?: string;
+  }>;
+}
+returns: {
+  imported: number;
+  errors: string[];
+}
+```
+
+### Queries
+
+#### `get`
+Get a single highlight by ID.
+```typescript
+args: { id: Id<"highlights"> }
+```
+
+#### `list`
+List all highlights with pagination.
+```typescript
+args: {
+  limit?: number;
+  offset?: number;
+}
+```
+
+#### `getRecent`
+Get recently added highlights.
+```typescript
+args: { limit?: number } // default: 10
+```
+
+#### `getBySource`
+Get all highlights from a specific source.
+```typescript
+args: { source: string }
+```
+
+#### `getByAuthor`
+Get all highlights by a specific author.
+```typescript
+args: { author: string }
+```
+
+#### `getByTag`
+Get highlights by tag.
+```typescript
+args: {
+  tag: string;
+  limit?: number; // default: 20
+}
+```
+
+#### `getByColor`
+Get highlights by color category.
+```typescript
+args: { color: string }
+```
+
+#### `search`
+Full-text search highlights by content.
+```typescript
+args: { searchTerm: string }
+```
+
+#### `getWithNotes`
+Get highlights that have associated notes.
+```typescript
+args: { limit?: number } // default: 20
+returns: Array<{
+  highlight: Highlight;
+  note: Note | null;
+}>
+```
+
+#### `getSources`
+Get all unique sources with counts.
+```typescript
+args: {}
+returns: Array<{ source: string; count: number }>
+```
+
+#### `getAuthors`
+Get all unique authors with counts.
+```typescript
+args: {}
+returns: Array<{ author: string; count: number }>
+```
+
+#### `getTags`
+Get all tags used in highlights with counts.
+```typescript
+args: {}
+returns: Array<{ tag: string; count: number }>
+```
+
+#### `getStats`
+Get highlight statistics.
+```typescript
+args: {}
+returns: {
+  total: number;
+  sources: number;
+  authors: number;
+  tags: number;
+  colors: number;
+  withNotes: number;
+  withoutNotes: number;
+}
+```
+
+#### `getRandom`
+Get random highlights for inspiration/review.
+```typescript
+args: { count?: number } // default: 1
+```
+
+---
+
+## Daily Entries Functions (`convex/dailyEntries.ts`)
+
+### Mutations
+
+#### `create`
+Create a new daily entry (prevents duplicates for same date).
+```typescript
+args: {
+  date: number;
+  mood?: "great" | "good" | "okay" | "bad" | "terrible";
+  energy?: number; // 1-10 scale
+  productivity?: number; // 1-10 scale
+  reflection?: string;
+  gratitude?: string[];
+  wins?: string[];
+  challenges?: string[];
+  noteId?: Id<"notes">;
+  ouraMetrics?: {
+    readiness?: number;
+    sleep?: number;
+    activity?: number;
+  };
+}
+```
+
+#### `update`
+Update an existing daily entry.
+```typescript
+args: {
+  id: Id<"dailyEntries">;
+  mood?: "great" | "good" | "okay" | "bad" | "terrible";
+  energy?: number;
+  productivity?: number;
+  reflection?: string;
+  gratitude?: string[];
+  wins?: string[];
+  challenges?: string[];
+  noteId?: Id<"notes">;
+  ouraMetrics?: {
+    readiness?: number;
+    sleep?: number;
+    activity?: number;
+  };
+}
+```
+
+#### `deleteEntry`
+Delete a daily entry.
+```typescript
+args: { id: Id<"dailyEntries"> }
+```
+
+#### `linkNote`
+Link daily entry to a daily note.
+```typescript
+args: {
+  entryId: Id<"dailyEntries">;
+  noteId: Id<"notes">;
+}
+```
+
+### Queries
+
+#### `get`
+Get a single daily entry by ID.
+```typescript
+args: { id: Id<"dailyEntries"> }
+```
+
+#### `getByDate`
+Get entry for a specific date.
+```typescript
+args: { date: number }
+```
+
+#### `getToday`
+Get today's entry.
+```typescript
+args: {}
+```
+
+#### `getRecent`
+Get recent daily entries.
+```typescript
+args: { limit?: number } // default: 7
+```
+
+#### `getByDateRange`
+Get entries within a date range.
+```typescript
+args: {
+  startDate: number;
+  endDate: number;
+}
+```
+
+#### `getThisWeek`
+Get this week's entries.
+```typescript
+args: {}
+```
+
+#### `getThisMonth`
+Get this month's entries.
+```typescript
+args: {}
+```
+
+#### `getByMood`
+Get entries by mood.
+```typescript
+args: {
+  mood: "great" | "good" | "okay" | "bad" | "terrible";
+  limit?: number; // default: 20
+}
+```
+
+#### `getLowEnergyDays`
+Get days with low energy.
+```typescript
+args: {
+  threshold?: number; // default: 5
+  limit?: number; // default: 20
+}
+```
+
+#### `getHighProductivityDays`
+Get days with high productivity.
+```typescript
+args: {
+  threshold?: number; // default: 7
+  limit?: number; // default: 20
+}
+```
+
+#### `getAverageMetrics`
+Get average metrics over a time period.
+```typescript
+args: { days?: number } // default: 30
+returns: {
+  period: string;
+  entryCount: number;
+  averageEnergy: number | null;
+  averageProductivity: number | null;
+  moodDistribution: {
+    great: number;
+    good: number;
+    okay: number;
+    bad: number;
+    terrible: number;
+  };
+}
+```
+
+#### `getStats`
+Get daily entry statistics.
+```typescript
+args: { days?: number } // default: 30
+returns: {
+  total: number;
+  recentCount: number;
+  period: string;
+  withMood: number;
+  withEnergy: number;
+  withProductivity: number;
+  withReflection: number;
+  withGratitude: number;
+  withWins: number;
+  withChallenges: number;
+  withOuraMetrics: number;
+  withNote: number;
+}
+```
+
+#### `getCurrentStreak`
+Get current and longest streak of consecutive entries.
+```typescript
+args: {}
+returns: {
+  currentStreak: number;
+  longestStreak: number;
+}
+```
+
+#### `getWithNote`
+Get entry with associated note.
+```typescript
+args: { id: Id<"dailyEntries"> }
+returns: {
+  entry: DailyEntry;
+  note: Note | null;
+}
+```
+
+---
+
 ## Deployed to
-- **URL**: https://outgoing-hornet-777.convex.cloud
+- **URL**: https://limitless-giraffe-500.convex.cloud
 - **Environment**: Preview deployment (oceanic-monitor-30)

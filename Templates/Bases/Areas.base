@@ -1,7 +1,7 @@
 filters:
   and:
     - '!file.name.contains("Template")'
-    - note.para = "area"
+    - note.para == "area"
 properties:
   file.name:
     displayName: Name
@@ -18,7 +18,7 @@ views:
     name: Active
     filters:
       and:
-        - note.status = "active"
+        - note.status == "active"
     order:
       - file.name
       - status
@@ -43,7 +43,7 @@ views:
       - review
     sort:
       - property: status
-        direction: ASC
+        direction: DESC
       - property: file.name
         direction: ASC
     columnSize:

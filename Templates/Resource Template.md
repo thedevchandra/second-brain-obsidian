@@ -3,11 +3,12 @@ para: resource
 topics: []
 type:
 rating:
-created: {{date}}
-last: {{date}}
+created: <% tp.file.creation_date("YYYY-MM-DD") %>
+last: <% tp.file.creation_date("YYYY-MM-DD") %>
 via:
 url:
 ---
+<%* await tp.file.move("/Resources/" + tp.file.title) %>
 
 ## Summary
 

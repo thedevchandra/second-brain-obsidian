@@ -1,4 +1,4 @@
-# Templates Index
+	# Templates Index
 
 This directory contains 52 templates organized by category to help you create consistent, well-structured notes in your Obsidian vault. Templates define metadata fields and structure for different types of content you want to track.
 
